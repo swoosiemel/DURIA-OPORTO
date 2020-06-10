@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>Duria-Oporto</title>
+    <link rel="stylesheet" href="styles.css">
+   <script src="https://kit.fontawesome.com/a076d05399.js"></script>
+  </head>
+  <body>
+  
+  </body>
+
+    <div class="bg-img">
+      <div class="content">
+        <div>
+          <p class="pri" id= "answer1"></p> 
+        </div>
+        <img src="clip.png" class="avatar">
+        <header>Log-in </header>
+        <form action="#">
+          <div class="field">
+            <span class="fa fa-user"></span>
+            <input type="text" id="user" required placeholder="Username or Email">
+          </div>
+<div class="field space">
+            <span class="fa fa-lock"></span>
+            <input type="password" id="pass" required placeholder="Password">
+            <span class="show">SHOW</span>
+          </div>
+<div class="pass">
+            <a href="#">Forgot Password?</a>
+          </div>
+<div class="field">
+            <input type="button" class="butt" onclick="getInfo()" value="LOGIN">
+          </div>
+</form>
+<div class="login">
+Or login with</div>
+<div class="links">
+          <div class="facebook">
+            <i class="fab fa-facebook-f"><span>Facebook</span></i>
+          </div>
+<div class="instagram">
+            <i class="fab fa-instagram"><span>Instagram</span></i>
+          </div>
+<div class="pro">
+            <p  id= "answer"></p> 
+          </div>
+
+</div>
+
+</div>
+</div>
+<script>
+
+  var people = [
+    {
+      user: "user",
+      pass: "user"
+    
+    }
+    
+  ]
+  var human = [
+    {
+       user: "admin",
+      pass: "admin"
+    }
+  ]
+  
+      function getInfo(){
+        var text = "It works";
+        var username = document.getElementById("user").value 
+        var password = document.getElementById("pass").value
+        for(i =0; i<people.length; i++)
+        for(i =0; i<human.length; i++){
+          if(username == people[i].user && password == people[i].pass)
+        {
+          document.getElementById("answer").innerHTML = text;
+          return
+        }
+        if(username == human[i].user && password == human[i].pass)
+        {
+          document.getElementById("answer1").innerHTML = text;
+          return
+        }
+        if(username == "" || password == ""){
+          alert("Please Enter Username or Password")
+        }
+        }
+          alert("Incorrect Username or Password")
+
+        }
+        
+
+      
+
+    </script>
+  </body>
+</html>
